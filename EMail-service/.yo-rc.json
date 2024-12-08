@@ -1,0 +1,9 @@
+{
+    "generator-water": {
+        "inner-project": true,
+        "project-type": "service",
+        "projectName": "EMail",
+        "projectGroupId": "it.water.email",
+        "projectVersion": "3.0.0"
+    }
+}
