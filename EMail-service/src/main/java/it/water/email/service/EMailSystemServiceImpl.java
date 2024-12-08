@@ -101,7 +101,7 @@ public class EMailSystemServiceImpl extends BaseEntitySystemServiceImpl<EMailTem
         try {
             template = cfg.getTemplate(templateName);
         } catch (IOException e) {
-            e.printStackTrace();
+            getLog().error(e.getMessage(), e);
         }
 
         Writer stringWriter = new StringWriter();
@@ -275,7 +275,7 @@ public class EMailSystemServiceImpl extends BaseEntitySystemServiceImpl<EMailTem
                 try {
                     attachPart.attachFile(file);
                 } catch (IOException ex) {
-                    ex.printStackTrace();
+                    getLog().error(ex.getMessage(), ex);
                 }
                 multipart.addBodyPart(attachPart);
             }
